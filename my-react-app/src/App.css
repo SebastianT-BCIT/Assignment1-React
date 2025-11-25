@@ -1,0 +1,180 @@
+/* --- 1. CSS Variables for Modern Styling --- */
+:root {
+  --primary-color: #007bff;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --text-color: #333;
+  --border-color: #ccc;
+  --bg-light: #f8f9fa;
+  --spacing-unit: 1rem;
+}
+
+/* --- 2. Global/Base Styles --- */
+.shopping-cart-app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-unit) calc(var(--spacing-unit) * 1.5);
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+}
+
+h1, h2 {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.divider {
+  margin: 30px 0;
+  border: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+/* --- 3. Layout (Flexbox) --- */
+.content-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.form-section,
+.cart-section {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+/* --- 4. Form Styling --- */
+.add-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.error-message {
+  color: var(--danger-color);
+  margin: 5px 0 0 0;
+  font-size: 0.85rem;
+}
+
+/* --- 5. Button Styling --- */
+.primary-button,
+.remove-button,
+.clear-cart-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 10px;
+}
+
+.primary-button:hover {
+  background-color: #0056b3;
+}
+
+.remove-button {
+  background-color: var(--danger-color);
+  color: white;
+  font-size: 0.9rem;
+}
+
+.remove-button:hover {
+  background-color: #c82333;
+}
+
+.clear-cart-button {
+  background-color: var(--warning-color);
+  color: var(--text-color);
+  margin-top: 15px;
+}
+
+.clear-cart-button:hover {
+  background-color: #e0a800;
+}
+
+/* --- 6. Cart List Styling --- */
+.cart-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.item-price-quantity {
+  margin-left: 10px;
+  color: #6c757d;
+}
+
+.line-total-text {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+}
+
+.line-total-amount {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.empty-message {
+    font-style: italic;
+    color: #6c757d;
+    padding: 10px;
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* --- 7. Summary Styling --- */
+.summary-section {
+  padding: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  background-color: #e7f0ff;
+}
+
+.total-cost-line {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.total-cost-amount {
+    color: var(--danger-color);
+}
